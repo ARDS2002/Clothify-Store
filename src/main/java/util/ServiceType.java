@@ -1,4 +1,7 @@
 package util;
 
-public class ServiceType {
+public enum ServiceType {
+
+    EMPLOYEE, PRODUCT, ORDER, SUPPLIER
+
 }

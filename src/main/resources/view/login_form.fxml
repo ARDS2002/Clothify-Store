@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" styleClass="border-pane" stylesheets="@../css/loginFormStyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+    <bottom>
+        <HBox prefHeight="100.0" prefWidth="534.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="lblTitle" text="VINTAGE CLOTHIFY">
+                    <font>
+                        <Font name="System Bold Italic" size="54.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="0.8759469696969697" endY="0.9393939407485904" startX="0.8522727272727273">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.15960000455379486" green="0.7599999904632568" blue="0.4690447449684143" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.7599999904632568" green="0.49103906750679016" blue="0.15960000455379486" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+            </children>
+        </HBox>
+    </bottom>
+   <right>
+      <Pane prefHeight="550.0" prefWidth="385.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="paneLogin" layoutX="93.0" layoutY="106.0" prefHeight="331.0" prefWidth="200.0" style="-fx-background-color: gray;">
+               <children>
+                  <JFXButton fx:id="btnAdmin" layoutX="28.0" layoutY="76.0" onAction="#btnAdminOnAction" text="ADMIN" />
+                  <JFXButton fx:id="btnUser" layoutX="117.0" layoutY="76.0" onAction="#btnUserOnAction" text="USER" />
+               </children>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Pane>
+         </children>
+      </Pane>
+   </right>
+</BorderPane>

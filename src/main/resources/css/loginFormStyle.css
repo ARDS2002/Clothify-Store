@@ -1,0 +1,7 @@
+/* Background image for BorderPane */
+.border-pane {
+    -fx-background-image: url("/asset/img_3.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}

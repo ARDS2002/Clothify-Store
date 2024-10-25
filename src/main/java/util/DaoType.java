@@ -1,4 +1,6 @@
 package util;
 
-public class DaoType {
+public enum DaoType {
+
+    EMPLOYEE, PRODUCT, ORDER, SUPPLIER
 }

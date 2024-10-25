@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserFormController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="148.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#btnProductOnAction" text="Product" />
+            <JFXButton layoutX="10.0" layoutY="10.0" onAction="#btnSupplierOnAction" text="Supplier" />
+            <JFXButton layoutX="10.0" layoutY="36.0" onAction="#btnOrderOnAction" text="Order" />
+            <JFXButton layoutX="10.0" layoutY="61.0" onAction="#btnReportOnAction" text="Report" />
+            <JFXButton layoutX="10.0" layoutY="87.0" onAction="#btnSettingOnAction" text="Settings" />
+            <JFXButton onAction="#btnBackOnAction" text="Back" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
