@@ -1,10 +1,11 @@
 package service.custom;
 
 import dto.Employee;
+import service.SuperService;
 
 import java.util.List;
 
-public interface EmployeeService {
+public interface EmployeeService extends SuperService {
 
     boolean addEmployee(Employee employee);
 

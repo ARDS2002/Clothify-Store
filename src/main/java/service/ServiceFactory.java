@@ -19,11 +19,13 @@ public class ServiceFactory {
     }
 
     public <T extends SuperService> T getServiceType(ServiceType type) {
-        return switch (type) {
-            case EMPLOYEE -> (T) new EmployeeServiceImpl();
-            case PRODUCT -> (T) new ProductServiceImpl();
-            case ORDER -> (T) new OrderServiceImpl();
-            case SUPPLIER -> (T) new SupplierServiceImpl();
-        };
+
+        switch (type){
+            case EMPLOYEE : return  (T) new EmployeeServiceImpl();
+            case PRODUCT : return (T) new ProductServiceImpl();
+            case ORDER : return(T) new OrderServiceImpl();
+            case SUPPLIER : return (T) new SupplierServiceImpl();
+        }
+        return null;
     }
 }

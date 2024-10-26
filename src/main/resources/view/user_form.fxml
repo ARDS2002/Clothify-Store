@@ -1,20 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserFormController">
-   <left>
-      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="148.0" spacing="15.0" BorderPane.alignment="CENTER">
-         <children>
-            <JFXButton onAction="#btnProductOnAction" text="Product" />
-            <JFXButton layoutX="10.0" layoutY="10.0" onAction="#btnSupplierOnAction" text="Supplier" />
-            <JFXButton layoutX="10.0" layoutY="36.0" onAction="#btnOrderOnAction" text="Order" />
-            <JFXButton layoutX="10.0" layoutY="61.0" onAction="#btnReportOnAction" text="Report" />
-            <JFXButton layoutX="10.0" layoutY="87.0" onAction="#btnSettingOnAction" text="Settings" />
-            <JFXButton onAction="#btnBackOnAction" text="Back" />
-         </children>
-      </VBox>
-   </left>
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="530.0" prefWidth="1140.0" styleClass="border-pane3" stylesheets="@../css/userStyle.css"
+            xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.UserFormController">
+    <left>
+        <Pane prefHeight="530.0" prefWidth="220.0" BorderPane.alignment="CENTER">
+            <children>
+                <Rectangle arcHeight="50.0" arcWidth="50.0" height="484.0" layoutX="12.0" layoutY="26.0" opacity="0.5"
+                           stroke="BLACK" strokeType="INSIDE" width="199.0"/>
+                <VBox alignment="CENTER" layoutX="61.0" layoutY="133.0" prefHeight="200.0" prefWidth="100.0"
+                      spacing="30.0">
+                    <children>
+                        <JFXButton onAction="#btnProductOnAction" style="-fx-background-color: lime;" text="Product">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                        <JFXButton layoutX="10.0" layoutY="10.0" onAction="#btnOrderOnAction" prefHeight="30.0"
+                                   prefWidth="74.0" style="-fx-background-color: lime;" text="Order">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                        <JFXButton layoutX="10.0" layoutY="36.0" onAction="#btnSupplierOnAction"
+                                   style="-fx-background-color: lime;" text="Supplier">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                        <JFXButton layoutX="10.0" layoutY="61.0" onAction="#btnReportOnAction"
+                                   style="-fx-background-color: lime;" text="Report">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                        <JFXButton layoutX="10.0" layoutY="87.0" onAction="#btnSettingOnAction"
+                                   style="-fx-background-color: lime;" text="Settings">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                        <JFXButton layoutX="10.0" layoutY="112.0" onAction="#btnBackOnAction" text="Back"
+                                   textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                    </children>
+                </VBox>
+                <Label layoutX="36.0" layoutY="39.0" prefHeight="75.0" prefWidth="150.0" text="USER" textFill="WHITE">
+                    <font>
+                        <Font name="Blackadder ITC" size="40.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </left>
+    <center>
+        <Rectangle arcHeight="50.0" arcWidth="50.0" height="520.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE"
+                   width="860.0" BorderPane.alignment="CENTER"/>
+    </center>
 </BorderPane>

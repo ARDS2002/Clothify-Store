@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.AdminFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="915.0" styleClass="border-pane2" stylesheets="@../css/adminStyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminFormController">
+   <left>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="50.0" arcWidth="50.0" height="459.0" layoutX="26.0" layoutY="34.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+            <Label layoutX="26.0" layoutY="29.0" prefHeight="75.0" prefWidth="150.0" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Blackadder ITC" size="40.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="50.0" layoutY="118.0" prefHeight="332.0" prefWidth="100.0" spacing="50.0">
+               <children>
+                  <JFXButton onAction="#btnEmployeeOnAction" style="-fx-background-color: lime;" text="Employee">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton onAction="#btnReportOnAction" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: lime;" text="Reports">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton onAction="#btnBackOnAction" prefHeight="26.0" prefWidth="66.0" text="Back" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="500.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" width="650.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

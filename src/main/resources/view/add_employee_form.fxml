@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="650.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddEmployeeFormController">
+   <children>
+      <TableView fx:id="tblEmployee" layoutX="50.0" layoutY="159.0" prefHeight="277.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="105.60003662109375" text="Name" />
+            <TableColumn fx:id="colContact" prefWidth="87.199951171875" text="Contact" />
+            <TableColumn fx:id="colEmail" prefWidth="166.40008544921875" text="Email" />
+            <TableColumn fx:id="colAddress" prefWidth="112.79998779296875" text="Address" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="31.0" layoutY="453.0" onAction="#btnSaveEmplyeeOnAction" style="-fx-background-color: yellow;" text="Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="93.0" layoutY="453.0" onAction="#btnUpdateEmplyeeOnAction" style="-fx-background-color: lime;" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="173.0" layoutY="453.0" onAction="#btnDeleteEmplyeeOnAction" style="-fx-background-color: red;" text="Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="245.0" layoutY="453.0" onAction="#btnSearchEmplyeeOnAction" text="Search">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtSearchEmployeeByID" layoutX="341.0" layoutY="453.0" promptText="ID" />
+      <Label layoutX="18.0" layoutY="14.0" text="Add Employee" textFill="#387633">
+         <font>
+            <Font name="Blackadder ITC" size="40.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmployeeID" layoutX="500.0" layoutY="22.0" promptText="ID" />
+      <JFXTextField fx:id="txtEmployeeName" layoutX="44.0" layoutY="105.0" promptText="name" />
+      <JFXTextField fx:id="txtEmployeeContact" layoutX="358.0" layoutY="105.0" prefWidth="117.0" promptText="contact" />
+      <JFXTextField fx:id="txtEmployeeAddress" layoutX="500.0" layoutY="105.0" promptText="address" />
+      <JFXTextField fx:id="txtEmployeeEmail" layoutX="204.0" layoutY="105.0" promptText="email" />
+   </children>
+</AnchorPane>

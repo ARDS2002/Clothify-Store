@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="520.0" prefWidth="860.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFormController">
+   <children>
+      <TableView fx:id="tblProduct" layoutX="14.0" layoutY="87.0" prefHeight="200.0" prefWidth="586.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="57.5999755859375" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="87.199951171875" text="Name" />
+            <TableColumn fx:id="colSize" prefWidth="72.0" text="Size" />
+            <TableColumn fx:id="colQty" prefWidth="69.60003662109375" text="Qty" />
+            <TableColumn fx:id="colPrice" text="Price" />
+            <TableColumn fx:id="colDiscount" prefWidth="80.79998779296875" text="Discount" />
+            <TableColumn fx:id="colCategory" prefWidth="82.4000244140625" text="Category" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblCart" layoutX="14.0" layoutY="311.0" prefHeight="200.0" prefWidth="540.0">
+         <columns>
+            <TableColumn fx:id="colPID" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="colPName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colPQty" prefWidth="75.0" text="Qty" />
+            <TableColumn fx:id="colPPrice" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="colPDiscount" prefWidth="75.0" text="Discount" />
+            <TableColumn fx:id="colPTotal" prefWidth="75.0" text="Total" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtProductQty" layoutX="678.0" layoutY="68.0" promptText="enter qty" />
+      <JFXTextField fx:id="txtCustomerName" layoutX="678.0" layoutY="125.0" promptText="customer name" />
+      <JFXTextField fx:id="txtCustomerEmail" layoutX="678.0" layoutY="187.0" promptText="customer email" />
+      <JFXTextField fx:id="txtEmployeeName" layoutX="678.0" layoutY="260.0" promptText="employee name" />
+      <JFXTextField fx:id="txtPQty" layoutX="574.0" layoutY="411.0" promptText="update qty" />
+      <JFXButton layoutX="718.0" layoutY="411.0" onAction="#btnUpdateCartOnAction" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: lime;" text="Update Cart">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="718.0" layoutY="311.0" onAction="#btnAddToCartOnAction" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: yellow;" text="Add to cart">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="718.0" layoutY="457.0" onAction="#btnDeleteProductOnAction" style="-fx-background-color: red;" text="Delete Product">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="600.0" layoutY="457.0" onAction="#btnPlaceOrder" style="-fx-background-color: orange;" text="Place Order">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="24.0" layoutY="14.0" text="Place Order" textFill="#387633">
+         <font>
+            <Font name="Blackadder ITC" size="40.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

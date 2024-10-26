@@ -1,13 +1,13 @@
 package entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -17,6 +17,7 @@ import java.time.LocalDate;
 public class OrderEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long oID;
     private String cName;
     private String cEmail;
@@ -25,5 +26,7 @@ public class OrderEntity {
     private Double discount;
     private LocalDate date;
     private Long eID;
-    
+    @ManyToMany
+    private List<OrderDetailEntity> orderDetails;
+
 }

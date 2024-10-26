@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,5 +22,6 @@ public class Order {
     private Double discount;
     private LocalDate date;
     private Long eID;
+    private List<OrderDetail> orderDetails;
 
 }
